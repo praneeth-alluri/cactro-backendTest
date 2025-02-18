@@ -27,11 +27,6 @@ app.post('/cache', (req, res) => {
     return res.status(201).json({ message: `Key '${key}' stored successfully.` });
 });
 
-// Get all
-app.get('/cache/', (req, res) => {
-    res.status(200).json({ cache });
-});
-
 
 // GET 
 app.get('/cache/:key', (req, res) => {
@@ -59,7 +54,7 @@ app.delete('/cache/:key', (req, res) => {
 });
 
 // Start the server
-const port = 3000;
+const port = 4000;
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
